@@ -1,0 +1,24 @@
+{
+    "name": "mini-task-manager-backend",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "nodemon src/server.js",
+        "start": "node src/server.js",
+        "db:migrate": "sequelize-cli db:migrate --config src/config/database.cjs --migrations-path src/database/migrations",
+        "db:migrate:undo": "sequelize-cli db:migrate:undo --config src/config/database.cjs --migrations-path src/database/migrations"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.7",
+        "express": "^4.21.2",
+        "pg": "^8.13.1",
+        "pg-hstore": "^2.3.4",
+        "sequelize": "^6.37.5"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.7",
+        "sequelize-cli": "^6.6.2"
+    }
+}
